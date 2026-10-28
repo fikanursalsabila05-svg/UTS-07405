@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzeo.Fashion | Fashion Mahasiswa & Pelajar Indonesia</title>
+    <meta name="description"
+        content="Alzeo.Fashion - Toko fashion modern, minimalis & affordable buat mahasiswa dan pelajar Indonesia. Baju, Celana, Kerudung dengan harga Rp35.000 - Rp150.000.">
+    <meta property="og:title" content="Alzeo.Fashion | Fashion Mahasiswa & Pelajar Indonesia">
+    <meta property="og:description"
+        content="Koleksi outfit daily kekinian, nyaman dipakai, ramah kantong pelajar & mahasiswa. Checkout langsung via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237F8764'/%3E%3Ctext x='50%25' y='54%25' font-family='Poppins,Arial,sans-serif' font-size='14' fill='%23F8F6F1' text-anchor='middle' font-weight='600'%3EALZEO%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top alzeo-navbar" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand alzeo-brand" href="#beranda">Alzeo<span class="brand-dot">.</span>Fashion</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu" aria-label="Buka menu navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kategori">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lookbook">Lookbook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 nav-actions">
+                    <button class="btn btn-icon" type="button" id="openSearchTop" aria-label="Cari produk">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="btn btn-icon position-relative" type="button" id="openWishlistTop"
+                        aria-label="Buka wishlist">
+                        <i class="bi bi-heart"></i>
+                        <span class="badge-dot d-none" id="wishlistBadgeTop"></span>
+                    </button>
+                    <button class="btn btn-icon position-relative" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" aria-label="Buka keranjang">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-badge d-none" id="cartBadgeTop">0</span>
+                    </button>
+                    <a class="btn btn-alzeo-primary d-none d-lg-inline-flex" href="#produk">Belanja Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end alzeo-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title alzeo-brand" id="mobileMenuLabel">Alzeo<span class="brand-dot">.</span>Fashion
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup menu"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column gap-3">
+            <nav class="nav flex-column mobile-nav">
+                <a class="nav-link" href="#beranda" data-bs-dismiss="offcanvas">Beranda</a>
+                <a class="nav-link" href="#kategori" data-bs-dismiss="offcanvas">Kategori</a>
+                <a class="nav-link" href="#produk" data-bs-dismiss="offcanvas">Produk</a>
+                <a class="nav-link" href="#lookbook" data-bs-dismiss="offcanvas">Lookbook</a>
+                <a class="nav-link" href="#tentang" data-bs-dismiss="offcanvas">Tentang</a>
+                <a class="nav-link" href="#faq" data-bs-dismiss="offcanvas">FAQ</a>
+                <a class="nav-link" href="admin.html">Admin Panel</a>
+            </nav>
+            <div class="d-flex flex-column gap-2 mt-auto">
+                <button class="btn btn-alzeo-outline w-100" data-bs-dismiss="offcanvas" id="openSearchMobile">
+                    <i class="bi bi-search me-2"></i>Cari Produk
+                </button>
+                <a class="btn btn-alzeo-primary w-100" href="#produk" data-bs-dismiss="offcanvas">Lihat Koleksi</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-section" id="beranda">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 reveal">
+                        <div class="hero-badge mb-3">
+                            <i class="bi bi-truck"></i>
+                            <span>Gratis Ongkir Min. Rp150.000 • Khusus Mahasiswa & Pelajar</span>
+                        </div>
+                        <h1 class="hero-title">Outfit Daily Kekinian, Ramah Kantong Buat Kamu.</h1>
+                        <p class="hero-subtitle">Koleksi Atasan, Bawahan & Kerudung dari Alzeo.Fashion dirancang
+                            minimalis, nyaman dipakai seharian, dan tetep kekinian buat kuliah maupun sekolah.</p>
+                        <div class="d-flex flex-wrap gap-2 hero-cta">
+                            <a class="btn btn-alzeo-primary btn-lg" href="#produk">
+                                <i class="bi bi-bag-heart me-2"></i>Lihat Koleksi
+                            </a>
+                            <a class="btn btn-alzeo-outline btn-lg" href="#promo">
+                                <i class="bi bi-stars me-2"></i>Promo Mahasiswa
+                            </a>
+                        </div>
+                        <div class="hero-stats mt-4">
+                            <div class="stat-item">
+                                <span class="stat-number">12+</span>
+                                <span class="stat-label">Koleksi Siap Pakai</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">Rp35k</span>
+                                <span class="stat-label">Mulai Dari</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">Fast</span>
+                                <span class="stat-label">Respon via WA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 reveal">
+                        <div class="hero-visual">
+                            <div class="hero-image-frame">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1020&auto=format&fit=crop"
+                                    alt="Model mahasiswa memakai outfit fashion minimalis dari Alzeo.Fashion"
+                                    loading="lazy">
+                            </div>
+                            <div class="hero-floating-card card-one">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-heart-fill text-terracotta"></i>
+                                    <div>
+                                        <p class="mb-0 fw-semibold">Best Seller</p>
+                                        <small class="text-muted">Suka dipilih mahasiswa</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-floating-card card-two">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-patch-check-fill text-sage"></i>
+                                    <div>
+                                        <p class="mb-0 fw-semibold">Nyaman & Minimalis</p>
+                                        <small class="text-muted">Cocok buat daily outfit</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kategori -->
+        <section class="section-padding" id="kategori">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <span class="section-eyebrow">Kategori</span>
+                        <h2 class="section-title">Belanja Sesuai Kebutuhan Kamu</h2>
+                        <p class="section-subtitle">Pilih kategori favorit biar langsung nemuin outfit yang pas buat
+                            harimu.</p>
+                    </div>
+                    <a class="btn btn-alzeo-ghost d-none d-md-inline-flex" href="#produk">Lihat Semua Produk <i
+                            class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                    <div class="col reveal">
+                        <article class="category-card" data-filter-category="Atasan">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=987&auto=format&fit=crop"
+                                    alt="Koleksi atasan minimalis untuk mahasiswa" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title">Atasan</h3>
+                                <p class="category-text">Kemeja, kaos & blouse kekinian</p>
+                                <span class="category-link">Jelajahi <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="category-card" data-filter-category="Bawahan">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1170&auto=format&fit=crop"
+                                    alt="Koleksi celana dan bawahan kekinian untuk pelajar" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title">Bawahan</h3>
+                                <p class="category-text">Celana, rok & jeans simpel</p>
+                                <span class="category-link">Jelajahi <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="category-card" data-filter-category="Kerudung">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=987&auto=format&fit=crop"
+                                    alt="Koleksi kerudung minimalis untuk mahasiswa" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title">Kerudung</h3>
+                                <p class="category-text">Pashmina & segi empat nyaman</p>
+                                <span class="category-link">Jelajahi <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col reveal">
+                        <article class="category-card" data-filter-category="Set Outfit">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1173&auto=format&fit=crop"
+                                    alt="Set outfit lengkap kekinian untuk kuliah" loading="lazy">
+                            </div>
+                            <div class="category-content">
+                                <h3 class="category-title">Set Outfit</h3>
+                                <p class="category-text">Langsung siap pakai, anti ribet</p>
+                                <span class="category-link">Jelajahi <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produk & Filter -->
+        <section class="section-padding bg-soft" id="produk">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <span class="section-eyebrow">Koleksi</span>
+                        <h2 class="section-title">Produk Unggulan Alzeo.Fashion</h2>
+                        <p class="section-subtitle">Pilih outfit favorit kamu, tambahkan ke keranjang, langsung checkout
+                            via WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- Filter Panel -->
+                <div class="filter-panel reveal">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-12 col-lg-4">
+                            <label class="form-label filter-label" for="searchInput">Cari Produk</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                <input type="search" class="form-control" id="searchInput"
+                                    placeholder="Cari nama produk...">
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <label class="form-label filter-label" for="filterCategory">Kategori</label>
+                            <select class="form-select" id="filterCategory">
+                                <option value="all">Semua</option>
+                                <option value="Atasan">Atasan</option>
+                                <option value="Bawahan">Bawahan</option>
+                                <option value="Kerudung">Kerudung</option>
+                                <option value="Set Outfit">Set Outfit</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <label class="form-label filter-label" for="filterSize">Ukuran</label>
+                            <select class="form-select" id="filterSize">
+                                <option value="all">Semua</option>
+                                <option value="All Size">All Size</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <label class="form-label filter-label" for="filterColor">Warna</label>
+                            <select class="form-select" id="filterColor">
+                                <option value="all">Semua</option>
+                                <option value="Cream">Cream</option>
+                                <option value="Hitam">Hitam</option>
+                                <option value="Sage">Sage</option>
+                                <option value="Terracotta">Terracotta</option>
+                                <option value="Beige">Beige</option>
+                                <option value="Cokelat">Cokelat</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <label class="form-label filter-label" for="sortBy">Urutkan</label>
+                            <select class="form-select" id="sortBy">
+                                <option value="default">Terbaru</option>
+                                <option value="price-asc">Harga: Rendah - Tinggi</option>
+                                <option value="price-desc">Harga: Tinggi - Rendah</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row g-2 align-items-center mt-1">
+                        <div class="col-12 col-lg-6">
+                            <label class="form-label filter-label mb-2">Rentang Harga</label>
+                            <div class="price-range">
+                                <input type="range" class="form-range" id="priceRange" min="35000" max="150000"
+                                    step="5000" value="150000">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">Rp35.000</small>
+                                    <small class="text-muted" id="priceRangeValue">Maks: Rp150.000</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex flex-wrap gap-2 justify-content-lg-end">
+                            <button class="btn btn-alzeo-ghost" id="resetFilters">
+                                <i class="bi bi-arrow-counterclockwise me-2"></i>Reset Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4 mb-3 reveal">
+                    <p class="result-count mb-0">Menampilkan <span id="resultCount">0</span> produk</p>
+                </div>
+
+                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4" id="productGrid">
+                    <!-- Produk akan dirender oleh JavaScript -->
+                </div>
+                <div class="empty-state d-none text-center py-5" id="emptyState">
+                    <i class="bi bi-search empty-state-icon"></i>
+                    <h3 class="mt-3">Produk tidak ditemukan</h3>
+                    <p class="text-muted">Coba ubah kata kunci atau reset filter kamu ya.</p>
+                    <button class="btn btn-alzeo-primary mt-2" id="emptyReset">Reset Filter</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lookbook -->
+        <section class="section-padding" id="lookbook">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <span class="section-eyebrow">Lookbook</span>
+                        <h2 class="section-title">Inspirasi Outfit Mahasiswa & Pelajar</h2>
+                        <p class="section-subtitle">Mix & match simpel buat kesan effortless tanpa bikin kantong kering.
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-6 reveal">
+                        <article class="lookbook-card">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1170&auto=format&fit=crop"
+                                alt="Inspirasi outfit kuliah minimalis dengan gaya clean" loading="lazy">
+                            <div class="lookbook-overlay">
+                                <div>
+                                    <span class="lookbook-tag">Kuliah Look</span>
+                                    <h3>Clean Minimalist</h3>
+                                    <a class="btn btn-alzeo-light" href="#produk">Cocokkan ke Produk</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-12 reveal">
+                                <article class="lookbook-card lookbook-card-sm">
+                                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=987&auto=format&fit=crop"
+                                        alt="Inspirasi outfit hangout kekinian pelajar" loading="lazy">
+                                    <div class="lookbook-overlay">
+                                        <div>
+                                            <span class="lookbook-tag">Hangout Vibe</span>
+                                            <h3>Soft & Casual</h3>
+                                            <a class="btn btn-alzeo-light" href="#produk">Cocokkan ke Produk</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-12 reveal">
+                                <article class="lookbook-card lookbook-card-sm">
+                                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=988&auto=format&fit=crop"
+                                        alt="Inspirasi outfit syar'i minimalis dengan kerudung" loading="lazy">
+                                    <div class="lookbook-overlay">
+                                        <div>
+                                            <span class="lookbook-tag">Modest Fit</span>
+                                            <h3>Elegan Tanpa Berlebihan</h3>
+                                            <a class="btn btn-alzeo-light" href="#produk">Cocokkan ke Produk</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo -->
+        <section class="section-padding bg-soft" id="promo">
+            <div class="container">
+                <div class="promo-banner reveal">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="promo-badge">PROMO MAHASISWA & PELAJAR</span>
+                            <h2 class="promo-title">Diskon Spesial Buat Kamu Yang Pengen Hemat</h2>
+                            <p class="promo-subtitle">Kumpulin outfit impian kamu, pakai kode diskon dan nikmatin
+                                belanja lebih hemat.</p>
+                            <div class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="discount-code">
+                                    <span class="code-label">KODE DISKON</span>
+                                    <span class="code-text">ALZEOHEMAT</span>
+                                </div>
+                                <div class="countdown" id="promoCountdown">
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="cdDays">00</span>
+                                        <span class="countdown-label">Hari</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="cdHours">00</span>
+                                        <span class="countdown-label">Jam</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="cdMinutes">00</span>
+                                        <span class="countdown-label">Menit</span>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <span class="countdown-number" id="cdSeconds">00</span>
+                                        <span class="countdown-label">Detik</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-alzeo-primary btn-lg mt-4" href="#produk">Gas Belanja Sekarang</a>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <div class="promo-illustration">
+                                <i class="bi bi-bag-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keunggulan -->
+        <section class="section-padding" id="tentang">
+            <div class="container">
+                <div class="section-header reveal text-center mx-auto">
+                    <span class="section-eyebrow">Kenapa Alzeo.Fashion</span>
+                    <h2 class="section-title">Belanja Nyaman, Hemat, & Tanpa Ribet</h2>
+                    <p class="section-subtitle">Dirancang khusus buat kebutuhan outfit harian mahasiswa dan pelajar
+                        Indonesia.</p>
+                </div>
+                <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-5">
+                    <div class="col reveal">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-cash-coin"></i>
+                            </div>
+                            <h3>Harga Pelajar</h3>
+                            <p>Mulai Rp35.000, tetap kekinian tanpa bikin jebol dompet.</p>
+                        </div>
+                    </div>
+                    <div class="col reveal">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-feather"></i>
+                            </div>
+                            <h3>Kualitas Nyaman</h3>
+                            <p>Bahan dipilih biar adem, ringan, dan enak dipakai seharian.</p>
+                        </div>
+                    </div>
+                    <div class="col reveal">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-cash-stack"></i>
+                            </div>
+                            <h3>COD Tersedia</h3>
+                            <p>Bisa bayar di tempat biar lebih aman dan tenang.</p>
+                        </div>
+                    </div>
+                    <div class="col reveal">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-truck"></i>
+                            </div>
+                            <h3>Gratis Ongkir</h3>
+                            <p>Gratis ongkir minimal pembelian Rp150.000.</p>
+                        </div>
+                    </div>
+                    <div class="col reveal">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3>Respon Cepat</h3>
+                            <p>Admin fast respon via WhatsApp buat bantu kamu belanja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni -->
+        <section class="section-padding bg-soft">
+            <div class="container">
+                <div class="section-header reveal text-center mx-auto">
+                    <span class="section-eyebrow">Kata Mereka</span>
+                    <h2 class="section-title">Apa Kata Mahasiswa & Pelajar?</h2>
+                    <p class="section-subtitle">Bukti simpel dari mereka yang udah dapetin outfit favorit di
+                        Alzeo.Fashion.</p>
+                </div>
+                <div id="testimonialCarousel" class="carousel slide testimonial-carousel reveal" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="testimonial-text">"Koleksinya minimalis banget, cocok buat kuliah. Harga
+                                    ramah kantong, bahan juga nyaman dipakai seharian."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">NR</div>
+                                    <div>
+                                        <h4>Nadya R.</h4>
+                                        <p>Mahasiswa • Semarang</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="testimonial-text">"Suka banget sama set outfitnya, langsung jadiin andalan
+                                    buat hari sibuk. Respon WA juga super cepat."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">AF</div>
+                                    <div>
+                                        <h4>Aulia F.</h4>
+                                        <p>Pelajar SMA • Bandung</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                                <p class="testimonial-text">"Kerudungnya ringan & nggak gerah, warnanya soft juga
+                                    gampang dipadupin. Pasti bakal repeat order!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">SZ</div>
+                                    <div>
+                                        <h4>Shafa Z.</h4>
+                                        <p>Mahasiswi • Yogyakarta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sebelumnya</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Selanjutnya</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-padding" id="faq">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-4 reveal">
+                        <span class="section-eyebrow">Bantuan</span>
+                        <h2 class="section-title">Pertanyaan yang Sering Ditanya</h2>
+                        <p class="section-subtitle">Masih bingung? Ini jawaban singkat biar kamu bisa langsung belanja
+                            dengan tenang.</p>
+                        <a class="btn btn-alzeo-outline" href="#newsletter"><i class="bi bi-whatsapp me-2"></i>Tanya
+                            Langsung via WA</a>
+                    </div>
+                    <div class="col-lg-8 reveal">
+                        <div class="accordion alzeo-accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        Apakah ukuran di Alzeo.Fashion ada size chart?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Ada. Di deskripsi tiap produk kami cantumkan ukuran yang tersedia (S/M/L/XL/All
+                                        Size). Buat kepastian, kamu bisa tanyain detail ukurannya langsung via WhatsApp ya.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        Bagaimana proses pengiriman?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Setelah kamu checkout via WhatsApp dan konfirmasi pesanan, kami akan proses secepat
+                                        mungkin. Estimasi pengiriman menyesuaikan ekspedisi dan lokasi kamu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        Bisa retur atau tukar ukuran?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Bisa dengan syarat produk belum dipakai, masih ada tag/label, dan dalam kemasan
+                                        asli. Untuk kendala ukuran, langsung aja chat kami via WhatsApp ya biar dibantu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Pembayaran bisa pakai apa aja?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Kami support transfer bank & COD (Cash On Delivery). Saat checkout via WhatsApp,
+                                        tim kami akan infokan detail pembayarannya ya.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / WA CTA -->
+        <section class="section-padding bg-soft" id="newsletter">
+            <div class="container">
+                <div class="newsletter-banner reveal">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <span class="section-eyebrow text-white-50">Stay Update</span>
+                            <h2 class="newsletter-title">Mau Dapetin Info Restock & Promo Terbaru?</h2>
+                            <p class="newsletter-subtitle">Ketik email kamu, kami kirim info promo kekinian langsung ke
+                                inbox. Atau lebih praktis, langsung aja chat via WhatsApp.</p>
+                            <form class="newsletter-form needs-validation" id="newsletterForm" novalidate>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="newsletterEmail"
+                                        placeholder="Masukkan alamat email kamu" required>
+                                    <button class="btn btn-newsletter" type="submit">Kirim</button>
+                                </div>
+                                <div class="invalid-feedback">Masukkan email yang valid ya.</div>
+                                <div class="valid-feedback">Terima kasih! Kamu bakal dapetin update dari Alzeo.Fashion.
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 text-center text-lg-end">
+                            <a class="btn btn-whatsapp-lg" href="https://wa.me/6281234567890?text=Halo%20Alzeo.Fashion%2C%20aku%20mau%20tanya%20koleksi%20terbaru%20ya"
+                                target="_blank" rel="noopener">
+                                <i class="bi bi-whatsapp me-2"></i>Chat Langsung via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-brand" href="#beranda">Alzeo<span class="brand-dot">.</span>Fashion</a>
+                    <p class="footer-text mt-3">Toko fashion modern-minimalis buat mahasiswa & pelajar Indonesia.
+                        Affordable, nyaman, dan tetep kekinian buat daily outfit.</p>
+                    <div class="d-flex gap-2 footer-social">
+                        <a href="#" aria-label="Instagram Alzeo.Fashion"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok Alzeo.Fashion"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" aria-label="Pinterest Alzeo.Fashion"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Kategori</h4>
+                    <ul class="footer-list">
+                        <li><a href="#produk">Atasan</a></li>
+                        <li><a href="#produk">Bawahan</a></li>
+                        <li><a href="#produk">Kerudung</a></li>
+                        <li><a href="#produk">Set Outfit</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Bantuan</h4>
+                    <ul class="footer-list">
+                        <li><a href="#faq">Ukuran</a></li>
+                        <li><a href="#faq">Pengiriman</a></li>
+                        <li><a href="#faq">Retur</a></li>
+                        <li><a href="#faq">Pembayaran</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="footer-title">Info Toko</h4>
+                    <ul class="footer-list footer-info">
+                        <li><i class="bi bi-geo-alt"></i>Indonesia • Melayani Seluruh Nusantara</li>
+                        <li><i class="bi bi-whatsapp"></i>Respon Cepat via WhatsApp</li>
+                        <li><i class="bi bi-clock"></i>Senin - Sabtu • 09.00 - 17.00</li>
+                    </ul>
+                    <a class="btn btn-alzeo-outline mt-2" href="admin.html"><i class="bi bi-shield-lock me-2"></i>Admin
+                        Panel</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="year"></span> Alzeo.Fashion. Dibuat untuk Praktikum UTS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <div>
+                <h5 class="offcanvas-title" id="cartOffcanvasLabel">Keranjang Belanja</h5>
+                <small class="text-muted"><span id="cartCountText">0</span> item di keranjang</small>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup keranjang"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="cartItems" class="cart-items flex-grow-1"></div>
+            <div class="cart-empty text-center d-none" id="cartEmpty">
+                <i class="bi bi-bag"></i>
+                <h6 class="mt-3">Keranjang kamu masih kosong</h6>
+                <p class="text-muted">Yuk, cari outfit favoritmu di koleksi Alzeo.Fashion</p>
+                <a class="btn btn-alzeo-primary" href="#produk" data-bs-dismiss="offcanvas">Lihat Koleksi</a>
+            </div>
+            <div class="cart-summary" id="cartSummary">
+                <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">Rp0</span>
+                </div>
+                <div class="d-flex justify-content-between text-muted">
+                    <span>Estimasi Ongkir</span>
+                    <span id="cartShipping">Hitung saat checkout</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between fw-semibold">
+                    <span>Total</span>
+                    <span id="cartTotal">Rp0</span>
+                </div>
+                <button class="btn btn-alzeo-primary w-100 mt-3" id="checkoutWa">
+                    <i class="bi bi-whatsapp me-2"></i>Checkout via WhatsApp
+                </button>
+                <small class="text-muted d-block text-center mt-2">Gratis ongkir min. pembelian Rp150.000</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content alzeo-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="quickViewModalLabel">Quick View</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="quickview-image">
+                                <img id="qvImage" src="" alt="Gambar produk" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="qv-badge" id="qvBadge"></span>
+                            <h3 class="qv-title" id="qvTitle"></h3>
+                            <p class="qv-category" id="qvCategory"></p>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <div class="qv-rating" id="qvRating"></div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="qv-price" id="qvPrice"></span>
+                                <span class="qv-price-old d-none" id="qvPriceOld"></span>
+                            </div>
+                            <p class="qv-desc" id="qvDesc"></p>
+                            <div class="qv-meta">
+                                <div>
+                                    <span class="meta-label">Ukuran Tersedia</span>
+                                    <span class="meta-value" id="qvSize"></span>
+                                </div>
+                                <div>
+                                    <span class="meta-label">Warna</span>
+                                    <span class="meta-value" id="qvColor"></span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <button class="btn btn-alzeo-primary flex-grow-1" id="qvAddCart">
+                                    <i class="bi bi-bag-plus me-2"></i>Tambah ke Keranjang
+                                </button>
+                                <button class="btn btn-alzeo-icon" id="qvWishlist" aria-label="Tambah ke wishlist">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="alzeoToast" class="toast alzeo-toast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <strong class="me-auto">Alzeo.Fashion</strong>
+                <small>Baru saja</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Tutup"></button>
+            </div>
+            <div class="toast-body" id="toastBody">
+                Berhasil ditambahkan ke keranjang!
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
